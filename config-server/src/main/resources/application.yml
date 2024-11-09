@@ -1,0 +1,15 @@
+server:
+  port: 2222
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Long2Seth/config-server.git
+          default-label: main
+          search-paths: "/yelp-service/**"
